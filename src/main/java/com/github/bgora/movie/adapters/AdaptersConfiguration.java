@@ -4,7 +4,7 @@ import com.github.bgora.movie.domain.MovieRepository;
 
 public class AdaptersConfiguration {
 
-    public MovieRepository filmRepository(){
+    public MovieRepository movieRepository(){
         return new InMemoryMovieRepository();
     }
 }

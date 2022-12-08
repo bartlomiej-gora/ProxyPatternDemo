@@ -9,19 +9,19 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 class InMemoryMovieRepository implements MovieRepository {
-    private final Map<String, Movie> films;
+    private final Map<String, Movie> movies;
 
     InMemoryMovieRepository() {
-        films = new HashMap<>();
+        movies = new HashMap<>();
     }
 
     @Override
     public void saveFMovie(final Movie movie) {
-        films.putIfAbsent(movie.getTitle(), movie);
+        movies.putIfAbsent(movie.getTitle(), movie);
     }
 
     @Override
     public List<Movie> listMovies() {
-        return films.entrySet().stream().map(Map.Entry::getValue).collect(Collectors.toList());
+        return movies.entrySet().stream().map(Map.Entry::getValue).collect(Collectors.toList());
     }
 }

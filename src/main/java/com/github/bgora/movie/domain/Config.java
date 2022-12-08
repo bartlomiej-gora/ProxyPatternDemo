@@ -6,6 +6,6 @@ public class Config {
 
     public MovieFacade filmFacade() {
         var adapterConfig = new AdaptersConfiguration();
-        return new MovieFacadeImpl(adapterConfig.filmRepository());
+        return new MovieFacadeImpl(adapterConfig.movieRepository());
     }
 }
