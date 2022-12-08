@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.tuple;
 
 public class MovieFacadeTest {
 
-    private MovieFacade movieFacade = new Config().filmFacade();
+    private MovieFacade movieFacade = new Config().movieFacade();
 
     @Test
     void testSaveOneFilm() {
