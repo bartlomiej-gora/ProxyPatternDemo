@@ -1,4 +1,4 @@
-package com.github.bgora.movie.adapters;
+package com.github.bgora.movie.domain;
 
 import com.github.bgora.movie.domain.Movie;
 

@@ -1,7 +1,5 @@
 package com.github.bgora.movie.domain;
 
-import com.github.bgora.movie.adapters.MovieRepository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -20,11 +18,11 @@ class MovieFacadeImpl implements MovieFacade {
 
     @Override
     public Optional<Movie> findByTitle(final String title) {
-        return movieRepository.listMovies().stream().filter(film -> film.title().equals(title)).findFirst();
+        return movieRepository.listMovies().stream().filter(movie -> movie.getTitle().equals(title)).findFirst();
     }
 
     @Override
     public List<Movie> findWithTitleStarting(final String title) {
-        return movieRepository.listMovies().stream().filter(movie -> movie.title().startsWith(title)).toList();
+        return movieRepository.listMovies().stream().filter(movie -> movie.getTitle().startsWith(title)).toList();
     }
 }

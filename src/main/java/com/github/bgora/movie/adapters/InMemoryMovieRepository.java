@@ -1,6 +1,7 @@
 package com.github.bgora.movie.adapters;
 
 import com.github.bgora.movie.domain.Movie;
+import com.github.bgora.movie.domain.MovieRepository;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +17,7 @@ class InMemoryMovieRepository implements MovieRepository {
 
     @Override
     public void saveFMovie(final Movie movie) {
-        films.putIfAbsent(movie.title(), movie);
+        films.putIfAbsent(movie.getTitle(), movie);
     }
 
     @Override

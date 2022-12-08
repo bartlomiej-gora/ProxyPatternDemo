@@ -27,8 +27,8 @@ public class MovieFacadeTest {
         var existingOpt = movieFacade.findByTitle(givenTitle);
         assertThat(existingOpt).isNotEmpty();
         var existing = existingOpt.get();
-        assertThat(existing.title()).isEqualTo(givenTitle);
-        assertThat(existing.releaseDate()).isEqualTo(givenReleaseDate);
+        assertThat(existing.getTitle()).isEqualTo(givenTitle);
+        assertThat(existing.getReleaseDate()).isEqualTo(givenReleaseDate);
     }
 
     @Test
